@@ -10,10 +10,13 @@ const getComputerChoice = () => {
 	}
 }
 
-const playerSelectionA = 'rock'; //Placeholder until a get function is created.
+const getPlayerChoice = () => {
+	let choice = prompt('Make your play (Rock, Paper or Scissors):', '');
+	return choice.trim().toLowerCase();
+}
 
 const computerSelection = getComputerChoice();
-const playerSelection = playerSelectionA.trim().toLowerCase();
+const playerSelection = getPlayerChoice();
 
 //Returns the result based on the selections.
 const playRound = (playerSelection, computerSelection) => {
@@ -33,5 +36,3 @@ const playRound = (playerSelection, computerSelection) => {
 		return 'Tie!';
 	}
 }
-
-console.log(computerSelection, playerSelection, playRound(playerSelection, computerSelection));
