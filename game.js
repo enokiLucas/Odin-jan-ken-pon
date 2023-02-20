@@ -10,10 +10,14 @@ const getComputerChoice = () => {
 	}
 }
 
-const playerSelectionA = 'rock'; //Placeholder until a get function is created.
+const getPlayerChoice = () => {
+	const choice = window.prompt('Type your choice', '');
+	const choiceFor = choice.trim().toLowerCase();
+	return choiceFor;
+}
 
 const computerSelection = getComputerChoice();
-const playerSelection = playerSelectionA.trim().toLowerCase();
+const playerSelection = getPlayerChoice();
 
 //Returns the result based on the selections.
 const playRound = (playerSelection, computerSelection) => {
@@ -31,6 +35,14 @@ const playRound = (playerSelection, computerSelection) => {
 		return 'You Lose! Scissors loses to Rock';
 	} if (playerSelection === computerSelection) {
 		return 'Tie!';
+	}
+}
+
+const game = (playerSelection, computerSelection) => {
+	for(let i = 0; i < 5; i++){
+		let result = [];
+		
+		result[i] = playRound(playerSelection, computerSelection);
 	}
 }
 
