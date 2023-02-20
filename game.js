@@ -36,3 +36,27 @@ const playRound = (playerSelection, computerSelection) => {
 		return 'Tie!';
 	}
 }
+
+const game = () => {
+	//const playerMoves = [];
+	//const computerMoves = [];
+	const score = [];
+
+	for (i=0; i<4; i++) {
+		const computerSelection = getComputerChoice();
+		const playerSelection = getPlayerChoice();
+
+		//playerMoves[i] = playerSelection;
+		//computerMoves[i] = computerSelection;
+
+		score[i] = playRound(playerSelection, computerSelection);
+	}
+
+	return score;
+}
+
+const result = game();
+
+for (i=0; i<4; i++) {
+	console.log(result[i]);
+}
