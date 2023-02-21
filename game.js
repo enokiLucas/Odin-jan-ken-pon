@@ -2,11 +2,11 @@
 const getComputerChoice = () => {
 	const random = Math.floor(Math.random()*3);
 	if(random === 0) {
-		return 'paper'; //paper
+		return 'paper';
 	} if (random === 1){
-		return 'rock'; //rock
+		return 'rock';
 	} if (random === 2){
-		return 'scissors'; //scissors
+		return 'scissors';
 	}
 }
 
@@ -16,8 +16,6 @@ const getPlayerChoice = () => {
 	return choiceFor;
 }
 
-const computerSelection = getComputerChoice();
-const playerSelection = getPlayerChoice();
 
 //Returns the result based on the selections.
 const playRound = (playerSelection, computerSelection) => {
@@ -38,12 +36,14 @@ const playRound = (playerSelection, computerSelection) => {
 	}
 }
 
-const game = (playerSelection, computerSelection) => {
-	for(let i = 0; i < 5; i++){
-		let result = [];
-		
-		result[i] = playRound(playerSelection, computerSelection);
+const game = () => {
+	for (let i=0; i<5; i++) {
+		let computerSelection = getComputerChoice();
+		const playerSelection = getPlayerChoice();
+		console.log(computerSelection)
+
+		//playRound(playerSelection, computerSelection);
 	}
 }
 
-console.log(computerSelection, playerSelection, playRound(playerSelection, computerSelection));
+console.log('Hello');
