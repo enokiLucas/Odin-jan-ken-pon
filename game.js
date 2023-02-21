@@ -11,11 +11,12 @@ const getComputerChoice = () => {
 }
 
 const getPlayerChoice = () => {
-	const choice = window.prompt('Type your choice', '');
-	const choiceFor = choice.trim().toLowerCase();
-	return choiceFor;
+	let choice = prompt('Make your play (Rock, Paper or Scissors):', '');
+	return choice.trim().toLowerCase();
 }
 
+const computerSelection = getComputerChoice();
+const playerSelection = playerSelectionA.trim().toLowerCase();
 
 //Returns the result based on the selections.
 const playRound = (playerSelection, computerSelection) => {
@@ -37,13 +38,25 @@ const playRound = (playerSelection, computerSelection) => {
 }
 
 const game = () => {
-	for (let i=0; i<5; i++) {
-		let computerSelection = getComputerChoice();
-		const playerSelection = getPlayerChoice();
-		console.log(computerSelection)
+	//const playerMoves = [];
+	//const computerMoves = [];
+	const score = [];
 
-		//playRound(playerSelection, computerSelection);
+	for (i=0; i<4; i++) {
+		const computerSelection = getComputerChoice();
+		const playerSelection = getPlayerChoice();
+
+		//playerMoves[i] = playerSelection;
+		//computerMoves[i] = computerSelection;
+
+		score[i] = playRound(playerSelection, computerSelection);
 	}
+
+	return score;
 }
 
-console.log('Hello');
+const result = game();
+
+for (i=0; i<4; i++) {
+	console.log(result[i]);
+}
