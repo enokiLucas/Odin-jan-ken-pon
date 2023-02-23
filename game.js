@@ -9,14 +9,15 @@ const getComputerChoice = () => {
 		return 'scissors'; //scissors
 	}
 }
-
+const computerSelection = getComputerChoice();
+/*
 const getPlayerChoice = () => {
 	let choice = prompt('Make your play (Rock, Paper or Scissors):', '');
 	return choice.trim().toLowerCase();
 }
-
-const computerSelection = getComputerChoice();
 const playerSelection = getPlayerChoice();
+*/
+
 
 //Returns the result based on the selections.
 const playRound = (playerSelection, computerSelection) => {
