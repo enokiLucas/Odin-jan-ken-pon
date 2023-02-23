@@ -9,7 +9,7 @@ const getComputerChoice = () => {
 		return 'scissors'; //scissors
 	}
 }
-const computerSelection = getComputerChoice();
+//const computerSelection = getComputerChoice();
 /*
 const getPlayerChoice = () => {
 	let choice = prompt('Make your play (Rock, Paper or Scissors):', '');
@@ -17,7 +17,6 @@ const getPlayerChoice = () => {
 }
 const playerSelection = getPlayerChoice();
 */
-
 
 //Returns the result based on the selections.
 const playRound = (playerSelection, computerSelection) => {
@@ -37,6 +36,31 @@ const playRound = (playerSelection, computerSelection) => {
 		return 'Tie!';
 	}
 }
+
+const btnRock = document.querySelector('.button-rock');
+btnRock.addEventListener('click', () => {
+	const computerSelection = getComputerChoice();
+	const playerSelection = 'rock';
+	const game = playRound(playerSelection, computerSelection);
+	console.log(game);
+})
+
+
+const btnPaper = document.querySelector('.button-paper');
+btnPaper.addEventListener('click', () => {
+	const computerSelection = getComputerChoice();
+	const playerSelection = 'paper';
+	const game = playRound(playerSelection, computerSelection);
+	console.log(game);
+})
+
+const btnScissors = document.querySelector('.button-scissors');
+btnScissors.addEventListener('click', () => {
+	const computerSelection = getComputerChoice();
+	const playerSelection = 'scissors';
+	const game = playRound(playerSelection, computerSelection);
+	console.log(game);
+})
 
 /*
 const game = () => {
