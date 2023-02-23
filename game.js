@@ -37,6 +37,7 @@ const playRound = (playerSelection, computerSelection) => {
 	}
 }
 
+/*
 const game = () => {
 	//const playerMoves = [];
 	//const computerMoves = [];
@@ -60,3 +61,4 @@ const result = game();
 for (i=0; i<4; i++) {
 	console.log(result[i]);
 }
+*/
