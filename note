@@ -1,0 +1,9 @@
+1)Display the running score
+
+	x1 save the result of playRound()
+	x3 define the score
+	x2 display the new score. 
+
+2)Announce a winner of the game once one player reaches 5 points.
+
+	1 
