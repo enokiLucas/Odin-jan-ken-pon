@@ -64,7 +64,43 @@ const makeScore = (arrResults) => {
 	return arrScore;
 }
 
+//The following functions deconstruct the return of makeScore()
+const getPlayerPoints = () => {
+	const arrScore = makeScore(arrResults);
+	return arrScore[0];
+}
+
+const getComputerPoints = () => {
+	const arrScore = makeScore(arrResults);
+	return arrScore[1];
+}
+
+const getNumbOfTies = () => {
+	const arrScore = makeScore(arrResults);
+	return arrScore[2];
+}
+
 //Announce winner
+const AnnounceWinner = () => {
+	const playerPoints = getPlayerPoints();
+	const computerPoints = getComputerPoints();
+
+	if (playerPoints === 5) {
+		const div = document.createElement('div');
+		const body = document.querySelector('body');
+		body.appendChild(div);
+		div.textContent = 'You won five rounds.';
+		arrResults.length = 0;
+	} if (computerPoints === 5) {
+		const div = document.createElement('div');
+		const body = document.querySelector('body');
+		body.appendChild(div);
+		div.textContent = 'You lost five rounds.';
+		arrResults.length = 0;
+	} else {
+		return null;
+	}
+}
 
 
 //Display the new score.
@@ -86,6 +122,7 @@ const rock = btnRock.addEventListener('click', () => {
 	saveResult(game);
 	printResult(game);
 	makeScore(arrResults);
+	AnnounceWinner();
 })
 
 
@@ -98,6 +135,7 @@ btnPaper.addEventListener('click', () => {
 	saveResult(game);
 	printResult(game);
 	makeScore(arrResults);
+	AnnounceWinner();
 })
 
 const btnScissors = document.querySelector('.button-scissors');
@@ -109,31 +147,5 @@ btnScissors.addEventListener('click', () => {
 	saveResult(game);
 	printResult(game);
 	makeScore(arrResults);
+	AnnounceWinner();
 })
-
-
-/*
-const game = () => {
-	//const playerMoves = [];
-	//const computerMoves = [];
-	const score = [];
-
-	for (i=0; i<4; i++) {
-		const computerSelection = getComputerChoice();
-		const playerSelection = getPlayerChoice();
-
-		//playerMoves[i] = playerSelection;
-		//computerMoves[i] = computerSelection;
-
-		score[i] = playRound(playerSelection, computerSelection);
-	}
-
-	return score;
-}
-
-const result = game();
-
-for (i=0; i<4; i++) {
-	console.log(result[i]);
-}
-*/
