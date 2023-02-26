@@ -10,15 +10,7 @@ const getComputerChoice = () => {
 	}
 }
 
-const getPlayerChoice = () => {
-	let choice = prompt('Make your play (Rock, Paper or Scissors):', '');
-	return choice.trim().toLowerCase();
-}
-
-const computerSelection = getComputerChoice();
-const playerSelection = playerSelectionA.trim().toLowerCase();
-
-//Returns the result based on the selections.
+//Return the result based on the the computer and player choices.
 const playRound = (playerSelection, computerSelection) => {
 	if (playerSelection === 'paper' && computerSelection === 'rock') {
 		return 'You Win! Paper beats Rock.';
@@ -37,6 +29,90 @@ const playRound = (playerSelection, computerSelection) => {
 	}
 }
 
+//Print the result of the game on the page.
+const printResult = (game) => {
+	const div = document.createElement('div');
+	const body = document.querySelector('body');
+	body.appendChild(div);
+	div.textContent = game;
+}
+
+//Save Result.
+const arrResults = [];
+const saveResult = (game) => {
+	arrResults.push(game);
+}
+
+//Define score. make an array that tracks the number of player victories, loses and ties
+const makeScore = (arrResults) => {
+	let j = arrResults.length;
+	let i = 0;
+	let playerPoints = 0;
+	let computerPoints = 0;
+	let numbOfTies = 0;
+	for(i; i < j; i++) {
+		if (arrResults[i].charAt(4) === 'W') {
+			playerPoints = playerPoints + 1;
+		}if (arrResults[i].charAt(4) === 'L') {
+			computerPoints = computerPoints + 1;
+		}if (arrResults[i].charAt(0) === 'T') {
+			numbOfTies = numbOfTies + 1;
+		}
+	}
+
+	const arrScore = [playerPoints, computerPoints, numbOfTies];
+	return arrScore;
+}
+
+//Announce winner
+
+
+//Display the new score.
+const displayNewScore = (score) => {
+	const div = document.createElement('div');
+	const body = document.querySelector('body');
+	body.appendChild(div);
+	div.textContent = score;
+}
+
+
+//buttons for the player to select its choice.
+const btnRock = document.querySelector('.button-rock');
+const rock = btnRock.addEventListener('click', () => {
+	const computerSelection = getComputerChoice();
+	const playerSelection = 'rock';
+	const game = playRound(playerSelection, computerSelection);
+
+	saveResult(game);
+	printResult(game);
+	makeScore(arrResults);
+})
+
+
+const btnPaper = document.querySelector('.button-paper');
+btnPaper.addEventListener('click', () => {
+	const computerSelection = getComputerChoice();
+	const playerSelection = 'paper';
+	const game = playRound(playerSelection, computerSelection);
+
+	saveResult(game);
+	printResult(game);
+	makeScore(arrResults);
+})
+
+const btnScissors = document.querySelector('.button-scissors');
+btnScissors.addEventListener('click', () => {
+	const computerSelection = getComputerChoice();
+	const playerSelection = 'scissors';
+	const game = playRound(playerSelection, computerSelection);
+
+	saveResult(game);
+	printResult(game);
+	makeScore(arrResults);
+})
+
+
+/*
 const game = () => {
 	//const playerMoves = [];
 	//const computerMoves = [];
@@ -60,3 +136,4 @@ const result = game();
 for (i=0; i<4; i++) {
 	console.log(result[i]);
 }
+*/
