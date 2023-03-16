@@ -1,0 +1,11 @@
+#plays-container {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	gap: 20px;
+}
+
+.button-plays {
+	height: 100px;
+	width: 100px;
+}
