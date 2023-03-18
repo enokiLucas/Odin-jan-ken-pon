@@ -9,3 +9,20 @@
 	height: 100px;
 	width: 100px;
 }
+
+#results-container {
+	display: flex;
+	gap: 5px;
+}
+
+#display-history {
+	border: red 1px solid;
+}
+
+#display-score {
+	border: green 1px solid;
+}
+
+#display-last-match {
+	border: blue 1px solid;
+}

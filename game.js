@@ -32,8 +32,8 @@ const playRound = (playerSelection, computerSelection) => {
 //Print the result of the game on the page.
 const printResult = (game) => {
 	const div = document.createElement('div');
-	const body = document.querySelector('body');
-	body.appendChild(div);
+	const display = document.querySelector('#display-last-match');
+	display.appendChild(div);
 	div.textContent = game;
 }
 
