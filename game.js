@@ -80,6 +80,19 @@ const getNumbOfTies = () => {
 	return arrScore[2];
 }
 
+//Print the score.
+const printScore = () => {
+	const playerPoints = getPlayerPoints();
+	const computerPoints = getComputerPoints();
+	const numberOfTies = getNumbOfTies();
+
+	const div = document.createElement('div');
+	const display = document.querySelector('#display-score');
+	display.appendChild(div);
+	div.textContent = "Player: "+playerPoints+"Computer: "+computerPoints+"Ties: "+numberOfTies;
+
+}
+
 //Announce winner
 const AnnounceWinner = () => {
 	const playerPoints = getPlayerPoints();
@@ -123,6 +136,7 @@ const rock = btnRock.addEventListener('click', () => {
 	printResult(game);
 	makeScore(arrResults);
 	AnnounceWinner();
+	printScore();
 })
 
 
