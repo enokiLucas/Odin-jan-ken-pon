@@ -141,6 +141,7 @@ btnPaper.addEventListener('click', () => {
 	printResult(game);
 	makeScore(arrResults);
 	AnnounceWinner();
+	printScore();
 })
 
 const btnScissors = document.querySelector('.button-scissors');
@@ -153,4 +154,5 @@ btnScissors.addEventListener('click', () => {
 	printResult(game);
 	makeScore(arrResults);
 	AnnounceWinner();
+	printScore();
 })
