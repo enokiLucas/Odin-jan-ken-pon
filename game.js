@@ -115,6 +115,18 @@ const AnnounceWinner = () => {
 	}
 }
 
+const printHistory = (arrResults, playerSelection, computerSelection) => {
+	let j = arrResults.length;
+	let txt = new String();
+	if (arrResults[i].charAt(4) === 'W') {
+		txt = "Player(V) "+ playerSelection+" x "+computerSelection+" Computer";
+	}if (arrResults[i].charAt(4) === 'L') {
+		txt = "Player "+ playerSelection+" x "+computerSelection+" Computer(V)";
+	}if (arrResults[i].charAt(0) === 'T') {
+		txt = "Player "+ playerSelection+" x "+computerSelection+" Computer";
+	}
+}
+
 
 //buttons for the player to select its choice.
 const btnRock = document.querySelector('.button-rock');
