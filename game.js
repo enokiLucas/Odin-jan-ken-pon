@@ -116,15 +116,6 @@ const AnnounceWinner = () => {
 }
 
 
-//Display the new score.
-const displayNewScore = (score) => {
-	const div = document.createElement('div');
-	const body = document.querySelector('body');
-	body.appendChild(div);
-	div.textContent = score;
-}
-
-
 //buttons for the player to select its choice.
 const btnRock = document.querySelector('.button-rock');
 const rock = btnRock.addEventListener('click', () => {
