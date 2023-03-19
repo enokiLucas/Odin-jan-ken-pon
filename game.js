@@ -115,16 +115,20 @@ const AnnounceWinner = () => {
 	}
 }
 
-const printHistory = (arrResults, playerSelection, computerSelection) => {
-	let j = arrResults.length;
+const printHistory = (game, playerSelection, computerSelection) => {
 	let txt = new String();
-	if (arrResults[i].charAt(4) === 'W') {
+	if (game[4] === 'W') {
 		txt = "Player(V) "+ playerSelection+" x "+computerSelection+" Computer";
-	}if (arrResults[i].charAt(4) === 'L') {
+	}if (game[4] === 'L') {
 		txt = "Player "+ playerSelection+" x "+computerSelection+" Computer(V)";
-	}if (arrResults[i].charAt(0) === 'T') {
+	}if (game[0] === 'T') {
 		txt = "Player "+ playerSelection+" x "+computerSelection+" Computer";
 	}
+
+	const div = document.createElement('div');
+	const history = document.querySelector('#display-history');
+	history.appendChild(div);
+	div.textContent = txt;
 }
 
 
@@ -140,6 +144,7 @@ const rock = btnRock.addEventListener('click', () => {
 	makeScore(arrResults);
 	AnnounceWinner();
 	printScore();
+	printHistory(game, playerSelection, computerSelection)
 })
 
 
@@ -154,6 +159,7 @@ btnPaper.addEventListener('click', () => {
 	makeScore(arrResults);
 	AnnounceWinner();
 	printScore();
+	printHistory(game, playerSelection, computerSelection)
 })
 
 const btnScissors = document.querySelector('.button-scissors');
@@ -167,4 +173,5 @@ btnScissors.addEventListener('click', () => {
 	makeScore(arrResults);
 	AnnounceWinner();
 	printScore();
+	printHistory(game, playerSelection, computerSelection)
 })
