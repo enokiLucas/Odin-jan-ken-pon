@@ -12,7 +12,19 @@
 
 #results-container {
 	display: flex;
-	gap: 5px;
+	gap: 15px;
+	justify-content: center;
+	margin: 20px;
+}
+
+.display {
+	color: white;
+	background-color: grey;
+	font-weight: bold;
+}
+
+.display div {
+	font-weight: normal;
 }
 
 #display-history {
