@@ -7,6 +7,8 @@
 	</head>
 	<body>
 
+		<div id="header" class="header">Jan Ken Pon</div>
+
 		<div id="plays-container" class="container button-container">
 			<button class="button button-plays button-rock">Rock</button>
 			<button class="button button-plays button-paper">Paper</button>
@@ -15,8 +17,24 @@
 
 		<div id="results-container" class="container display-container">
 			<div id="display-history" class="display display-history">History</div>
-			<div id="display-score" class="display">Score</div>
-			<div id="display-last-match" class="display">Match</div>
+			<div id="display-score" class="display display-score">Score</div>
+			<div id="display-last-match" class="display display-last-match">Match</div>
+			
+			<div id="scoreboard" class="container scoreboard-container">
+				<div id="number-of-games" class="scoreboard-element"></div>
+				
+				<div id="player-points" class="scoreboard-element scoreboard-child-container">
+					<div id="player" class="player">Player</div>
+					<div id="points-player" class="points-player"></div>
+				</div>
+
+				<div id="computer-points" class="scoreboard-element scoreboard-child-container">
+					<div id="computer" class="computer">Computer</div>
+					<div id="points-computer" class="points-computer"></div>
+				</div>
+
+			</div>
+
 		</div>
 		
 		<script src="game.js"></script>		
