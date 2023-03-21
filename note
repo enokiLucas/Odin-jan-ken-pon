@@ -1,9 +1,6 @@
-1)Display the running score
+Color palette
 
-	x1 save the result of playRound()
-	x3 define the score
-	x2 display the new score. 
-
-2)Announce a winner of the game once one player reaches 5 points.
-
-	1 
+	#2D2727 is a dark gray color.				background
+	#413543 is a dark brown color.
+	#8F43EE is a bright purple color.
+	#F0EB8D is a light yellow color.
