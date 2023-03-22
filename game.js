@@ -131,6 +131,23 @@ const printHistory = (game, playerSelection, computerSelection) => {
 	div.textContent = txt;
 }
 
+//display computer move in the display in computer-side
+const displayComputerMove = (computerSelection) => {
+	const div = document.createElement('div');
+	const computerDisplay = document.querySelector('#display-computer-move');
+	
+
+	if (computerDisplay.hasChildNodes() === true) {
+		const computerDisplayChild = document.querySelector('#display-computer-move div')
+		computerDisplayChild.remove();
+		computerDisplay.appendChild(div);
+		div.textContent = computerSelection;
+	} else {
+		computerDisplay.appendChild(div);
+		div.textContent = computerSelection;
+	}
+	
+}
 
 //buttons for the player to select its choice.
 const btnRock = document.querySelector('.button-rock');
@@ -144,7 +161,8 @@ const rock = btnRock.addEventListener('click', () => {
 	makeScore(arrResults);
 	AnnounceWinner();
 	printScore();
-	printHistory(game, playerSelection, computerSelection)
+	printHistory(game, playerSelection, computerSelection);
+	displayComputerMove(computerSelection);
 })
 
 

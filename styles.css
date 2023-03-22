@@ -1,5 +1,6 @@
 body {
 	margin:0;
+	background-color: #413543;
 }
 
 #header {
@@ -12,16 +13,28 @@ body {
 	
 }
 
+#player-side {
+	margin: 20px;
+	color: #F0EB8D;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 #plays-container {
 	display: flex;
 	flex: 1;
 	justify-content: center;
 	gap: 20px;
+	margin: 20px;
 }
 
 .button-plays {
 	height: 100px;
 	width: 100px;
+	background-color: #2D2727;
+	color: #F0EB8D;
+	border: 1px solid #F0EB8D;
 }
 
 #results-container {
