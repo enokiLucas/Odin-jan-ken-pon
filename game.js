@@ -177,7 +177,8 @@ btnPaper.addEventListener('click', () => {
 	makeScore(arrResults);
 	AnnounceWinner();
 	printScore();
-	printHistory(game, playerSelection, computerSelection)
+	printHistory(game, playerSelection, computerSelection);
+	displayComputerMove(computerSelection);
 })
 
 const btnScissors = document.querySelector('.button-scissors');
@@ -191,5 +192,6 @@ btnScissors.addEventListener('click', () => {
 	makeScore(arrResults);
 	AnnounceWinner();
 	printScore();
-	printHistory(game, playerSelection, computerSelection)
+	printHistory(game, playerSelection, computerSelection);
+	displayComputerMove(computerSelection);
 })
