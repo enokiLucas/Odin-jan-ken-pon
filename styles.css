@@ -13,6 +13,10 @@ body {
 	
 }
 
+#game-main {
+	display: flex;
+}
+
 #player-side {
 	margin: 20px;
 	color: #F0EB8D;
