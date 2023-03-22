@@ -37,6 +37,25 @@ body {
 	border: 1px solid #F0EB8D;
 }
 
+#computer-side {
+	margin: 20px;
+	color: #8F43EE;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#display-computer-move {
+	height: 100px;
+	width: 100px;
+	background-color: #2D2727;
+	color: #8F43EE;
+	border: 1px solid #8F43EE;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 #results-container {
 	display: flex;
 	gap: 15px;
