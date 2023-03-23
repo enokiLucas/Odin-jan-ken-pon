@@ -72,8 +72,10 @@ body {
 	display: flex;
 	gap: 5px;
 	border: white solid 2px;
-	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
+
 
 
 
