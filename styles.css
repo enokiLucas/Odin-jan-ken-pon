@@ -68,7 +68,12 @@ body {
 
 /*----------------------------------Scoreboard--------------------------------*/
 
-
+#scoreboard {
+	display: flex;
+	gap: 5px;
+	border: white solid 2px;
+	justify-content: center;
+}
 
 
 
