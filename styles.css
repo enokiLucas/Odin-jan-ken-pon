@@ -12,7 +12,8 @@ body {
 	text-align: center;
 	
 }
-
+/*------------------------------- The main section of the page------------------------------------*/
+/*contains the buttons and display the computer move */
 #game-main {
 	display: flex;
 	justify-content: center;
@@ -63,6 +64,20 @@ body {
 	justify-content: center;
 	align-items: center;
 }
+/*--------------------------End of the main section---------------------------*/
+
+/*----------------------------------Scoreboard--------------------------------*/
+
+
+
+
+
+
+/*----------------------------End of the scoreboard section------------------------*/
+
+/*-------------------------------Display section-----------------------------------*/
+/*Show history, score and match
+background grey */
 
 #results-container {
 	display: flex;
@@ -92,3 +107,4 @@ body {
 #display-last-match {
 	border: blue 1px solid;
 }
+/*End of the displays*/
