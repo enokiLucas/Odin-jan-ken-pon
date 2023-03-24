@@ -156,13 +156,12 @@ const printNumberOfGamesAtTheScoreboard = () => {
 	const div = document.createElement('div');
 	const scoreboardNumberOfGames = document.querySelector('#number-of-games');
 
-	
-	if (scoreboardNumberOfGames.hasChildNodes() === true) {
-		const scoreboardNumberOfGamesChild = document.querySelector('#number-of-games div')
-		scoreboardNumberOfGamesChild.remove();
+	if (numberOfGames === 1) {
 		scoreboardNumberOfGames.appendChild(div);
 		div.textContent = numberOfGames;
 	} else {
+		const scoreboardNumberOfGamesChild = document.querySelector('#number-of-games div')
+		scoreboardNumberOfGamesChild.remove();
 		scoreboardNumberOfGames.appendChild(div);
 		div.textContent = numberOfGames;
 	}
