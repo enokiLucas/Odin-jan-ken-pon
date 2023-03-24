@@ -157,7 +157,7 @@ const printNumberOfGamesAtTheScoreboard = () => {
 	const scoreboardNumberOfGames = document.querySelector('#number-of-games');
 
 	if (scoreboardNumberOfGames.hasChildNodes() === true) {
-		const scoreboardNumberOfGamesChild = document.querySelector('#number-og-games div')
+		const scoreboardNumberOfGamesChild = document.querySelector('#number-of-games div')
 		scoreboardNumberOfGamesChild.remove();
 		scoreboardNumberOfGames.appendChild(div);
 		div.textContent = numberOfGames;
