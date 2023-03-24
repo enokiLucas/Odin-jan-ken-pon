@@ -76,6 +76,11 @@ body {
 	flex-direction: column;
 }
 
+#number-of-games {
+	display: flex;
+	gap: 5px;
+}
+
 
 
 

@@ -198,6 +198,7 @@ btnPaper.addEventListener('click', () => {
 	printScore();
 	printHistory(game, playerSelection, computerSelection);
 	displayComputerMove(computerSelection);
+	printNumberOfGamesAtTheScoreboard();
 })
 
 const btnScissors = document.querySelector('.button-scissors');
@@ -213,5 +214,6 @@ btnScissors.addEventListener('click', () => {
 	printScore();
 	printHistory(game, playerSelection, computerSelection);
 	displayComputerMove(computerSelection);
+	printNumberOfGamesAtTheScoreboard();
 })
 
