@@ -149,6 +149,24 @@ const displayComputerMove = (computerSelection) => {
 	
 }
 
+//Print the number of games in the scoreboard.
+let numberOfGames = 0;
+const printNumberOfGamesAtTheScoreboard = () => {
+	numberOfGames = numberOfGames + 1;
+	const div = document.createElement('div');
+	const scoreboardNumberOfGames = document.querySelector('#number-of-games');
+
+	if (scoreboardNumberOfGames.hasChildNodes() === true) {
+		const scoreboardNumberOfGamesChild = document.querySelector('#number-og-games div')
+		scoreboardNumberOfGamesChild.remove();
+		scoreboardNumberOfGames.appendChild(div);
+		div.textContent = numberOfGames;
+	} else {
+		scoreboardNumberOfGames.appendChild(div);
+		div.textContent = numberOfGames;
+	}
+}
+
 //buttons for the player to select its choice.
 const btnRock = document.querySelector('.button-rock');
 const rock = btnRock.addEventListener('click', () => {
@@ -163,6 +181,7 @@ const rock = btnRock.addEventListener('click', () => {
 	printScore();
 	printHistory(game, playerSelection, computerSelection);
 	displayComputerMove(computerSelection);
+	printNumberOfGamesAtTheScoreboard();
 })
 
 
@@ -195,3 +214,4 @@ btnScissors.addEventListener('click', () => {
 	printHistory(game, playerSelection, computerSelection);
 	displayComputerMove(computerSelection);
 })
+
