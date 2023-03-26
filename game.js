@@ -167,6 +167,16 @@ const printNumberOfGamesAtTheScoreboard = () => {
 	}
 }
 
+//Update the scoreboard
+///Player
+const updatePlayerPoints = () => {
+	const playerPoints = getPlayerPoints();
+	const div = document.createElement('div');
+	const pointsPlayer = document.querySelector('#points-player')
+	pointsPlayer.appendChild(div);
+	div.textContent = playerPoints;
+}
+
 //buttons for the player to select its choice.
 const btnRock = document.querySelector('.button-rock');
 const rock = btnRock.addEventListener('click', () => {
@@ -182,6 +192,7 @@ const rock = btnRock.addEventListener('click', () => {
 	printHistory(game, playerSelection, computerSelection);
 	displayComputerMove(computerSelection);
 	printNumberOfGamesAtTheScoreboard();
+	updatePlayerPoints();
 })
 
 
