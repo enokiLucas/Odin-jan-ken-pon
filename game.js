@@ -172,7 +172,9 @@ const printNumberOfGamesAtTheScoreboard = () => {
 const updatePlayerPoints = () => {
 	const playerPoints = getPlayerPoints();
 	const div = document.createElement('div');
-	const pointsPlayer = document.querySelector('#points-player')
+	const pointsPlayer = document.querySelector('#points-player');
+	const pointsPlayerChild = document.querySelector('#points-player div');
+	pointsPlayerChild.remove();
 	pointsPlayer.appendChild(div);
 	div.textContent = playerPoints;
 }
