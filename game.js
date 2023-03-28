@@ -103,16 +103,18 @@ const printScore = () => {
 const AnnounceWinner = () => {
 	const playerPoints = getPlayerPoints();
 	const computerPoints = getComputerPoints();
+	const div = document.createElement('div');
+	const body = document.querySelector('#announce-winner');
+
+	if (body.hasChildNodes() === true) {
+		body.removeChild(body.firstChild);
+	}
 
 	if (playerPoints === 5) {
-		const div = document.createElement('div');
-		const body = document.querySelector('body');
 		body.appendChild(div);
 		div.textContent = 'You won five rounds.';
 		arrResults.length = 0;
 	} if (computerPoints === 5) {
-		const div = document.createElement('div');
-		const body = document.querySelector('body');
 		body.appendChild(div);
 		div.textContent = 'You lost five rounds.';
 		arrResults.length = 0;
