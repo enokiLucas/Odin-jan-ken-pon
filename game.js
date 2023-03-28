@@ -30,13 +30,18 @@ const playRound = (playerSelection, computerSelection) => {
 }
 
 //Print the result of the game on the page.
-/*
 const printResult = (game) => {
 	const div = document.createElement('div');
-	const display = document.querySelector('#display-last-match');
-	display.appendChild(div);
-	div.textContent = game;
-}*/
+	const display = document.querySelector('#print-result');
+	if (display.hasChildNodes() === true) {
+		display.removeChild(display.firstChild);
+		display.appendChild(div);
+		div.textContent = game;
+	} else {
+		display.appendChild(div);
+		div.textContent = game;
+	}
+}
 
 //Save Result.
 const arrResults = [];
@@ -198,7 +203,7 @@ const rock = btnRock.addEventListener('click', () => {
 	const game = playRound(playerSelection, computerSelection);
 
 	saveResult(game);
-	//printResult(game);
+	printResult(game);
 	makeScore(arrResults);
 	AnnounceWinner();
 	printScore();
@@ -217,7 +222,7 @@ btnPaper.addEventListener('click', () => {
 	const game = playRound(playerSelection, computerSelection);
 
 	saveResult(game);
-	//printResult(game);
+	printResult(game);
 	makeScore(arrResults);
 	AnnounceWinner();
 	printScore();
@@ -235,7 +240,7 @@ btnScissors.addEventListener('click', () => {
 	const game = playRound(playerSelection, computerSelection);
 
 	saveResult(game);
-	//printResult(game);
+	printResult(game);
 	makeScore(arrResults);
 	AnnounceWinner();
 	printScore();
