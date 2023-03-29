@@ -65,7 +65,16 @@ body {
 	align-items: center;
 }
 /*--------------------------End of the main section---------------------------*/
-
+/*-----------------------------Results---------------------------------------*/
+#results {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: white;
+	font-weight: bold;
+	font-size: large;
+}
+/*-------------------------------End of the results-----------------------------*/
 /*----------------------------------Scoreboard--------------------------------*/
 
 #scoreboard {
